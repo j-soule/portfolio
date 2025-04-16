@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jennifer Soule | Portfolio</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+   
+    <script
+      src="https://kit.fontawesome.com/525e6d3376.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-left">
+            <a href="#">
+              <img
+                src="./img/word-mark-150.webp"
+                alt="Stylized word mark for Jennifer Soule"
+              />
+            </a>
+          </div>
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 6H20M4 12H20M4 18H20"
+                stroke="#ffffff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+
+          <div class="nav-dropdown" id="navMenu">
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+            <button id="darkModeIcon" aria-label="Toggle dark mode">🌙</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" >
+      <div>
+        <img src="./img/profile-1.webp" alt="Photo of me." />
+      </div>
+      <div>
+        <h1>Hi, I'm Jen!</h1>
+        <p>Full Stack Developer | Open Source Enthusiast</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about container" id="about">
+      <h2>A little about me</h2>
+      <p>
+        I'm a fullstack developer in Edmonton Alberta Canada with a love for
+        solving problems. I have experince in both front and back end languages,
+        with a focus on React, PHP and have started delving into Python. When
+        not coding I can be found knitting, reading, or playing D&D.
+      </p>
+      <p>
+        I am passionate about open source projects and helping the dev community
+        at large. I am currently a board member with the Dev Edmonton Society
+        and have been working within the community to foster new meetups and
+        networking opportunities. My latest project with them has been
+        organizing the Mega Meetup at Edmonton Unlimited as well as researching
+        and writing grant proposals to bring in more funding for the society.
+      </p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <!-- Porfolio Card - Atomic Improv  -->
+        <div class="portfolio-card" onclick="openModal('modal1')">
+          <img src="./img/AIC.webp" alt="Atomic Improv Logo" />
+        </div>
+
+        <!-- Portfolio Card - This Website -->
+        <div class="portfolio-card" onclick="openModal('modal2')">
+          <img src="./img/fulllogo.webp" alt="Jennifer Soule Logo" />
+        </div>
+
+        <!-- Portfolio Card - D20 Development -->
+        <div class="portfolio-card" onclick="openModal('modal3')">
+          <img src="./img/d20development.webp" alt="Red D20" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Atomic Improv -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('modal1')">
+          &times;
+        </button>
+        <img src="./img/AIC.webp" alt="Atomic Improv" />
+        <h3>Case Study: Atomic Improv</h3>
+        <h4>Objective</h4>
+        <p>
+          Atomic Improv is a local comedy duo that has been preforming all over
+          the world for over 30 years. They hadn't had their website updated in
+          several years and much of the content was out of date.
+        </p>
+        <h4>The Design</h4>
+        <p>
+          In order to nail down the design we ran through a design sprint, took
+          a lot of feedback from the client and ended up settling on a dark
+          theme with details like a brick wall background and neon light
+          elements to nod to the years the client spent doing stand up comedy at
+          clubs.
+        </p>
+        <h4>The Development</h4>
+        <p>
+          The client was already familiar with the Wordpress ecosystem so we
+          chose to keep that as a base to build on. I created a custom theme
+          using php and sass.
+        </p>
+        <p>
+          I was also responsible for checking accessability, that it met WC3
+          standards and the creation of a styleguide for the client.
+        </p>
+
+        <div class="modal-buttons">
+          <a
+            href="https://github.com/j-soule/atomic-improv-a"
+            class="button"
+            target="_blank"
+            >See the Code</a
+          >
+          <a href="https://atomicimprov.com/" class="button" target="_blank"
+            >Live Site</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- This website -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('modal2')">
+          &times;
+        </button>
+        <img src="./img/fulllogo.webp" alt="Porflio Logo" />
+        <h3>Case Study: Personal Portfolio Site</h3>
+        <h4>Objective</h4>
+        <p>A portfolio of projects I have worked on.</p>
+        <h4>The Design</h4>
+        <p>
+          When considering the design of this portfolio I used the brand styling
+          that I developed while I was in school. I really enjoyed the process
+          of iteration, flexing my design skills and getting to come up with
+          personal branding that fit me as a developer.
+        </p>
+
+        <div class="modal-buttons">
+          <a href="#" class="button" target="_blank">GitHub</a>
+          <a href="#" class="button" target="_blank">Live Site</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- D20 Development -->
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('modal3')">
+          &times;
+        </button>
+        <img src="./img/d20development.webp" alt="D20 Devlopment" />
+        <h3>Case Study: D20 Development</h3>
+        <h4>Objective</h4>
+        <p>
+          The purpose of this project was to create a directory of developers
+          where the user can search for the developer that best suits thier
+          needs.
+        </p>
+        <h4>Functionality</h4>
+        <p>
+          The user can navigate to the different categories of developers. On
+          these pages there are cards with the developers information including
+          if they are active or not.
+        </p>
+
+        <div class="modal-buttons">
+          <a
+            href="https://github.com/j-soule/d20-development"
+            class="button"
+            target="_blank"
+            >See the Code</a
+          >
+          <a
+            href="https://d20-development.vercel.app/"
+            class="button"
+            target="_blank"
+            >Live Site</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="contact">
+          <h3>Contact Me</h3>
+          <p>
+            <a href="mailto:jensoule@hotmail.com">jensoule@hotmail.com</a>
+          </p>
+        </div>
+        <div class="social-links">
+          <h3>Socials</h3>
+          <div>
+            <a href="https://www.linkedin.com/in/jennifer-soule"
+              ><i
+                class="fa-brands fa-linkedin fa-2xl"
+                style="color: #ffffff"
+              ></i
+            ></a>
+          </div>
+          <div>
+            <a href="https://github.com/j-soule"
+              ><i class="fa-brands fa-github fa-2xl" style="color: #ffffff"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p>Copyright &copy; Jennifer Soule 2025</p>
+      </div>
+    </footer>
+
+    <script>
+      function openModal(id) {
+        document.getElementById(id).classList.add("active");
+      }
+
+      function closeModal(id) {
+        document.getElementById(id).classList.remove("active");
+      }
+
+      // Dark Mode Toggle Logic
+      const iconToggle = document.getElementById("darkModeIcon");
+      iconToggle.addEventListener("click", () => {
+        const isDark = document.body.classList.toggle("dark-mode");
+        iconToggle.textContent = isDark ? "☀️" : "🌙";
+        localStorage.setItem("darkMode", isDark);
+      });
+
+      // On load: set theme
+      if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("dark-mode");
+        iconToggle.textContent = "☀️";
+      }
+
+      // Menu toggle
+      const toggle = document.getElementById("menuToggle");
+      const menu = document.getElementById("navMenu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>
