@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jennifer Soule | Portfolio</title>
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="" href="./js/main.js" />
+    <!-- <link rel="" href="./js/main.js" /> -->
     <script
       src="https://kit.fontawesome.com/525e6d3376.js"
       crossorigin="anonymous"
@@ -173,7 +173,7 @@
         </p>
 
         <div class="modal-buttons">
-          <a href="#" class="button" target="_blank">GitHub</a>
+          <a href="https://github.com/j-soule/portfolio" class="button" target="_blank">See the Code</a>
           <a href="#" class="button" target="_blank">Live Site</a>
         </div>
       </div>
@@ -248,4 +248,34 @@
       </div>
     </footer>
   </body>
+  <script>
+    function openModal(id) {
+        document.getElementById(id).classList.add("active");
+      }
+    
+      function closeModal(id) {
+        document.getElementById(id).classList.remove("active");
+      }
+    
+      // Dark Mode Toggle Logic
+      const iconToggle = document.getElementById("darkModeIcon");
+      iconToggle.addEventListener("click", () => {
+        const isDark = document.body.classList.toggle("dark-mode");
+        iconToggle.textContent = isDark ? "☀️" : "🌙";
+        localStorage.setItem("darkMode", isDark);
+      });
+    
+      // On load: set theme
+      if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("dark-mode");
+        iconToggle.textContent = "☀️";
+      }
+    
+      // Menu toggle
+      const toggle = document.getElementById("menuToggle");
+      const menu = document.getElementById("navMenu");
+    
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("show");
+      });</script>
 </html>
